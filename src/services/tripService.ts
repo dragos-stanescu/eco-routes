@@ -1,6 +1,8 @@
-export const fetchTrips = async () => {
+export const fetchTrips = async (pageParam = 1, limit = 10) => {
   try {
-    const response = await fetch("http://localhost:8080/trips");
+    const response = await fetch(
+      `http://localhost:8080/trips?_page=${pageParam}&_limit=${limit}`
+    );
     if (!response.ok) {
       throw new Error("Network response failed: " + response.statusText);
     }
