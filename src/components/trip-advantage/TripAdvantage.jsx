@@ -7,11 +7,11 @@ export const TripAdvantage = ({ advantage, iconIndex }) => {
     const availableIcons = [SunIcon, EditIcon, CalendarIcon, LinkIcon];
 
     if (index >= availableIcons.length) {
-      return <SunIcon color={"black"} />;
+      return <SunIcon color={"black"} data-testid="icon-svg" />;
     }
 
     const IconComponent = availableIcons[index];
-    return <IconComponent color={"black"} />;
+    return <IconComponent color={"black"} data-testid="icon-svg" />;
   };
 
   return (
